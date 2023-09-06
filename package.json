@@ -1,0 +1,31 @@
+{
+  "name": "sure-template-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrsure0324/sure-template-cli.git"
+  },
+  "author": "Mrsure0324",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Mrsure0324/sure-template-cli/issues"
+  },
+  "bin": {
+    "sure-cli": "index.js"
+  },
+  "homepage": "https://github.com/Mrsure0324/sure-template-cli#readme",
+  "dependencies": {
+    "@inquirer/prompts": "^3.0.3",
+    "chalk": "^5.3.0",
+    "commander": "^11.0.0",
+    "figlet": "^1.6.0",
+    "inquirer": "^9.2.10",
+    "mustache": "^4.2.0"
+  }
+}
