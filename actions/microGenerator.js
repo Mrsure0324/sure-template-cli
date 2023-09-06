@@ -42,7 +42,7 @@ export default async () => {
             ],
         });
 
-        const templateConfig = await import(`${root}/modules/templates/${pageType}/.template.js`)
+        const templateConfig = await import(`${root}/templates/generator/${pageType}/.template.js`)
         const modules = templateConfig?.default?.modules;
         const info = {
             name: await input({
@@ -98,7 +98,7 @@ export default async () => {
 
         //模版解析      
         
-        const path = `${root}/modules/templates/${pageType}/${templateConfig.default.resolve}`;
+        const path = `${root}/templates/generator/${pageType}/${templateConfig.default.resolve}`;
 
         let template = null;
         try {
@@ -112,13 +112,15 @@ export default async () => {
         const output = Mustache.render(template, createInfo);
 
         // 文件输出
-        const outputRoot = `${root}/test`;
+        const outputRoot = `${root}/sure-demo`;
         const outputName = createInfo.name;
         const fileName = 'index.tsx';
         const filePath = `${outputRoot}/${outputName}`
         try {
             if (!fs.existsSync(filePath)) {
                 fs.mkdirSync(filePath, { recursive: true });
+            } else {
+                return console.log(chalk.red('【Error:】路径已存在，请检查'))
             }
             await fs.writeFileSync(`${filePath}/${fileName}`, output);
             console.log(chalk.greenBright.bold('========= 文件输出 成功 ========='));

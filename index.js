@@ -27,7 +27,7 @@ const run = () => {
     program
         .command('generator')
         .alias('gen')
-        .description('使用')
+        .description('启动微生成器')
         .action(() => {
             microGenerator();
         });
