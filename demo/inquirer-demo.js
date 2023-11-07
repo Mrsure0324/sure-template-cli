@@ -6,6 +6,8 @@ import {
     confirm,
     password,
 } from '@inquirer/prompts';
+import treeify from 'treeify'
+import chalk from 'chalk'
 const run = async () => {
     const answers = {
         input: await input({
@@ -77,12 +79,11 @@ const run = async () => {
         password: await password({
             message: 'Inquirer Password',
         }),
-        editor: await password({
-            message: 'Inquirer Editor',
-        }),
 
     }
-
+    // console.log(chalk.blueBright('-----------Result------------'))
+    // console.log(chalk.blueBright(treeify.asTree(answers)))
+    // console.log(chalk.blueBright('-----------Result------------'))
     console.log(answers)
 }
 

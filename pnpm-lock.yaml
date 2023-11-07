@@ -23,6 +23,9 @@ dependencies:
   mustache:
     specifier: ^4.2.0
     version: 4.2.0
+  treeify:
+    specifier: ^1.1.0
+    version: 1.1.0
 
 packages:
 
@@ -495,6 +498,11 @@ packages:
     engines: {node: '>=0.6.0'}
     dependencies:
       os-tmpdir: 1.0.2
+    dev: false
+
+  /treeify@1.1.0:
+    resolution: {integrity: sha512-1m4RA7xVAJrSGrrXGs0L3YTwyvBs2S8PbRHaLZAkFw7JR8oIFwYtysxlBZhYIa7xSyiYJKZ3iGrrk55cGA3i9A==}
+    engines: {node: '>=0.6'}
     dev: false
 
   /tslib@2.6.2:

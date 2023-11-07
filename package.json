@@ -26,6 +26,7 @@
     "commander": "^11.0.0",
     "figlet": "^1.6.0",
     "inquirer": "^9.2.10",
-    "mustache": "^4.2.0"
+    "mustache": "^4.2.0",
+    "treeify": "^1.1.0"
   }
 }

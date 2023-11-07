@@ -4,6 +4,7 @@ import createInfoFormat from '../utils/createInfoFormat.js'
 import mkdir from '../utils/mkdir.js'
 import chalk from 'chalk'
 import Mustache from 'mustache'
+import treeify from 'treeify'
 import fs from 'fs'
 const root = process.cwd();
 export default async () => {
@@ -88,7 +89,7 @@ export default async () => {
         const createInfo = createInfoFormat(info);
         if(createInfo) {
             console.log(chalk.greenBright.bold('========= 参数解析 成功 ========='))
-            console.log(createInfo)
+            console.log(chalk.blueBright(treeify.asTree(createInfo,true)))
         } else {
             console.log(chalk.red('【Error:】参数解析 失败'))
             console.log(createInfo)

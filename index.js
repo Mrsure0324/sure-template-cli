@@ -4,6 +4,7 @@ import figlet from 'figlet'
 import chalk from 'chalk'
 import { Command } from 'commander'
 import microGenerator from './actions/microGenerator.js'
+import treeify from 'treeify'
 const init = () => {
     console.log(
         chalk.greenBright(
